@@ -42,14 +42,26 @@ if (isNaN(length)) {
   )
   return;
 }
+//sets the length of password
+options.numberOfChars = length;
 
 //Criteria prompts for password
-
+options.hasLowerChars = window.confirm (
+  "Click ok to include lower case characters."
+);
+options.hasLowerChars = window.confirm (
+  "Click ok to include upper case characters."
+);
+options.hasLowerChars = window.confirm (
+  "Click ok to include special characters."
+);
+options.hasLowerChars = window.confirm (
+  "Click ok to include numerical characters."
+);
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-document.getElementById("password").value = password;
 
 
 
