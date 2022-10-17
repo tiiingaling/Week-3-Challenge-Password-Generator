@@ -49,15 +49,35 @@ options.numberOfChars = length;
 options.hasLowerChars = window.confirm (
   "Click ok to include lower case characters."
 );
-options.hasLowerChars = window.confirm (
+options.hasUpperChars = window.confirm (
   "Click ok to include upper case characters."
 );
-options.hasLowerChars = window.confirm (
+options.hasSpecialChars = window.confirm (
   "Click ok to include special characters."
 );
-options.hasLowerChars = window.confirm (
+options.hasNumberChars = window.confirm (
   "Click ok to include numerical characters."
 );
+
+//
+var charList = []
+      
+    if (option.hasLowerChars) {
+      lowerCase.forEach((element) => charList.push(element));
+    }
+
+    if (option.hasUpperChars) {
+      upperCase.forEach((element) => charList.push(element));
+    }
+
+    if (option.hasSpecialChars) {
+      special.forEach((element) => charList.push(element));
+    }
+
+    if (option.hasNumberChars) {
+      numbers.forEach((element) => charList.push(element));
+    }
+
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
