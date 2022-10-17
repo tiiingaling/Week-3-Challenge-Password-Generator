@@ -7,3 +7,4 @@ This week's challenge was to complete the Javascript code in order to generate a
 ![screenshot of the completed generator](./assets/screenshot.png)
 
 ##  Link to completed challenge
+https://tiiingaling.github.io/Week-3-Challenge-Password-Generator/
