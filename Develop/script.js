@@ -25,7 +25,7 @@ function generatePassword() {
       hasSpecialChars: false,
       hasNumberChars: false,
     };
-  }
+ 
 
   //Prompts on length
 var length = window.prompt ("Choose between 8 and 128 characters for your password.");
@@ -85,8 +85,8 @@ for (var i = 0; i < options.numberOfChars; i++) {
   randomPassword.push(charList[randomIndex])
 }
 
-return randomPassword.join(password)
-
+return randomPassword.join("")
+ }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
