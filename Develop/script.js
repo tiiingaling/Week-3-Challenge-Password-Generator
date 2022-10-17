@@ -59,22 +59,13 @@ options.hasNumberChars = window.confirm (
 
 //if password has xx element
 var charList = []
-      
-    if (option.hasLowerChars) {
-      lowerCaseChar.forEach((element) => charList.push(element));
-    }
+var criteria = ["hasLowerChars", "hasUpperChars","hasSpecialChars","hasNumberChars"]
 
-    if (option.hasUpperChars) {
-      upperCaseChar.forEach((element) => charList.push(element));
-    }
-
-    if (option.hasSpecialChars) {
-      specialChar.forEach((element) => charList.push(element));
-    }
-
-    if (option.hasNumberChars) {
-      numbersChar.forEach((element) => charList.push(element));
-    }
+criteria.forEach(option => {
+  if (options[option]) {
+    upperCaseChar.forEach((element) => charList.push(element));
+  }
+})
 
 console.log(charList)
 
@@ -90,11 +81,6 @@ return randomPassword.join("")
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
-
-
-
 
 
 
